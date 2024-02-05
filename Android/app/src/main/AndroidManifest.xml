@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rentalapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RentalApp"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".verify"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_verify_users"
+            android:exported="false" />
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+
+        <activity
+            android:name=".custom_view_request"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_Product_Request"
+            android:exported="false" />
+        <activity
+            android:name=".send_request"
+            android:exported="false" />
+        <activity
+            android:name=".edit_product"
+            android:exported="false" />
+        <activity
+            android:name=".Custom_Product"
+            android:exported="false" />
+        <activity
+            android:name=".view_users"
+            android:exported="false" />
+        <activity
+            android:name=".send_complaints_view_reply"
+            android:exported="false" />
+        <activity
+            android:name=".add_product"
+            android:exported="false" />
+        <activity
+            android:name=".borrowed_products"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".chat_with_users"
+            android:exported="false" />
+        <activity
+            android:name=".change_password"
+            android:exported="false" />
+        <activity
+            android:name=".sent_complaint"
+            android:exported="false" />
+        <activity
+            android:name=".view_borrowed_history"
+            android:exported="false" />
+        <activity
+            android:name=".view_request_status"
+            android:exported="false" />
+        <activity
+            android:name=".view_product"
+            android:exported="false" />
+        <activity
+            android:name=".manage_product"
+            android:exported="false" />
+        <activity
+            android:name=".view_profile"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".registration"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

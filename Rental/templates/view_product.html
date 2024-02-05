@@ -1,0 +1,35 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+
+<!--<body>-->
+{% extends 'admin_index1.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-dark table-hover">
+    <tr>
+      <th width="120" scope="row"><h4>Product name </h4></th>
+      <td width="113"><h4>Product type </h4></td>
+      <td width="70"><h4>Details</h4></td>
+      <td width="90"><h4>Price/day</h4></td>
+      <td width="95"><h4>Image</h4></td>
+      <td width="65">&nbsp;</td>
+    </tr>
+    {% for i in obj %}
+    <tr>
+      <th scope="row">&nbsp;{{i.Product_name}}</th>
+      <td>&nbsp;{{i.Product_type}}</td>
+      <td>&nbsp;{{i.Details}}</td>
+      <td>&nbsp;{{i.Price_per_day }}</td>
+      <td>&nbsp;<img src="{{i.image.url}}" alt="image not found" style="height: 50px; width: 50px"></td>
+      <td><a href="{% url 'delete' p_id=i.id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+<!--</body>-->
+<!--</html>-->
+{% endblock %}

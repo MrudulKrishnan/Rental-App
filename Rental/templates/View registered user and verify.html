@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+
+<!--<body>-->
+{% extends 'admin_index1.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-dark table-hover">
+    <tr>
+      <th scope="row"><h3>Name</h3></th>
+      <td><h3>Adress/Proof</h3></td>
+      <td><h3>Email</h3></td>
+      <td><h3>Phone</h3></td>
+      <td>&nbsp;</td>
+    </tr>
+    {% for i in user %}
+    <tr>
+      <th scope="row">&nbsp;{{i.Firstname}}{{i.Lastname}}</th>
+      <td>&nbsp;<img src="{{ i.Proof.url }}" alt="image not found" style="height: 50px; width: 50px;"></td>
+      <td>&nbsp;{{i.Email}}</td>
+      <td>&nbsp;{{i.Phone}}</td>
+        {% if i.LID.Type == 'pending' %}
+        <td>
+        <p><a href="{% url 'accept' accept_id=i.LID.id %}">Accept</a></p>
+      <p><a href="{% url 'reject' reject_id=i.LID.id %}">Reject</a></p></td>
+      {% elif i.LID.Type == 'user' %}
+      <td><p>Accepted</p></td>
+      {% elif i.LID.Type == 'rejected' %}
+      <td><p>Rejected</p></td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+<!--</body>-->
+<!--</html>-->
+{% endblock %}

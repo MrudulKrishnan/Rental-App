@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".home">
+
+    <Button
+        android:id="@+id/butt_view_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View profile" />
+
+    <Button
+        android:id="@+id/butt_product_management"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="product management" />
+
+    <Button
+        android:id="@+id/butt_verify_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="verify users" />
+
+    <Button
+        android:id="@+id/butt_borrowed_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View borrowed product" />
+
+    <Button
+        android:id="@+id/butt_view_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="view product" />
+
+    <Button
+        android:id="@+id/butt_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="chat with customer" />
+
+    <Button
+        android:id="@+id/butt_request_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="view request status" />
+
+<!--    <Button-->
+<!--        android:id="@+id/butt_borrowed_history"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="view borrowed product history" />-->
+
+    <Button
+        android:id="@+id/butt_send_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send complaint and view reply" />
+
+    <Button
+        android:id="@+id/butt_change_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="change password" />
+
+    <Button
+        android:id="@+id/butt_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="logout" />
+</LinearLayout>
